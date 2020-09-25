@@ -1,0 +1,36 @@
+{% extends 'conversations/base.html' %}
+{% block content %}
+
+    <h5><b>{{ convo.title }}</b></h5>
+    <p><i>Conversation started on {{ convo.start_date }}</i></p>
+    <hr>
+
+    <p>👇 Leave a message!</p>
+
+    <form action="{% url 'addmessage' convo.id %}" method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" name="Submit" class="btn btn-primary">
+    </form>
+
+    <br>
+
+    <div class="message" 
+    style="background-color: rgba(234, 234, 234, 0.25);">
+        {% for message in messages %}
+            <p>{{ message.text }}</p>
+            <i>{{ message.date_and_time_sent }}</i>
+            <a href="">Leave a thought</a>
+            <hr>
+        {% endfor %}
+        <hr>
+
+    </div>
+    
+    <a href="{% url 'home' %}">
+        <button class="btn btn-success">
+        Back to Home
+        </button>
+    </a>
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'conversations/base.html' %}
+{% block content %}
+
+    <p>Go ahead and create a conversation!</p>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" name="Submit">
+    </form>
+
+{% endblock %}

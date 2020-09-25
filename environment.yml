@@ -1,0 +1,30 @@
+name: miniremesh
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - asgiref=3.2.10
+  - ca-certificates=2020.7.22
+  - certifi=2020.6.20
+  - django=3.1.1
+  - krb5=1.16.4
+  - libcxx=10.0.0
+  - libedit=3.1.20191231
+  - libffi=3.2.1
+  - libpq=11.2
+  - ncurses=6.2
+  - openssl=1.1.1h
+  - pip=20.2.2
+  - psycopg2=2.8.2
+  - python=3.6.7
+  - pytz=2020.1
+  - readline=7.0
+  - setuptools=49.6.0
+  - sqlite=3.33.0
+  - sqlparse=0.3.1
+  - tk=8.6.10
+  - wheel=0.35.1
+  - xz=5.2.5
+  - zlib=1.2.11
+prefix: /Users/aaronaguerrevere/opt/anaconda3/envs/miniremesh
+

@@ -1,0 +1,28 @@
+{% extends 'conversations/base.html' %}
+{% block content %}
+
+    <h4>Here, you'll find a list of all conversations:</h4>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card card-body">
+                <div class="all-convos">
+
+                    {% for i in conversations %}
+                        <div>
+                            <p>
+                                <a href="{% url 'convodetail' i.id %}">
+                                {{i.title}}
+                                </a>
+                            </p>
+                            <i>{{i.start_date}}</i>
+                            <br><hr>
+                        </div>
+                    {% endfor %}
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
